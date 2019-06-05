@@ -1,6 +1,10 @@
 FROM msoedov/hacker-slides
 
-VOLUME $(pwd)/slides /app/slides
+RUN rm -rf /app/slides 
+
+RUN mkdir -p /app/slides 
+
+COPY /slides /app/slides
 
 EXPOSE 8080
 
